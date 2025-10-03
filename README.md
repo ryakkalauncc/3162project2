@@ -3,7 +3,7 @@
 <b>I am using the Global Crocodile Species Dataset from Kaggle. This dataset provides detailed information on all recognized crocodile species across the globe. It includes taxonomic classification, geographic distribution, habitat details, population estimates, and conservation statuses. The dataset provides both biological and ecological attributes to compare with. With some of the features of this dataset in mind, I want to predict the species of a crocodile based on the length, weight, habitat, location, and few other characteristics. I am considering using random forest becuase my dataset is moderate sized, random forest can handle numerical and categorical data and can capture non-linear relationships.</b>
 <h2>Pre-processing the Data</h2>
 <b>
-I plan on handling missing and unknown data in the sex column with NaN and dropping irrelevant columns such as Observation ID, Observer Name and Notes, and Date of Observation. From there I'll choose a target variable.
+I plan on handling missing and unknown data in the sex column with NaN and dropping irrelevant columns such as Observation ID, Observer Name and Notes, and Date of Observation. I also drop rows with missing values. From there I'll choose a target variable. My target variable is "Common Name" and I continue by defining features x and target y. Finally, in order to ensure a clean numeric dataset for modeling, I identified categorical columns in X. I used one-hot encoding to turn them into numeric features, and used drop_first = True to avoid the dummy variable trap.
 </b>
 <ul></ul>
 <b></b>
